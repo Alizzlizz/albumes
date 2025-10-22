@@ -1,0 +1,118 @@
+/* --- Fuente inspirada en BTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f9f0ff, #f5e6ff);
+    color: #333;
+}
+
+/* --- Encabezado con animación --- */
+.encabezado {
+    background: linear-gradient(90deg, #7d3cff, #b480ff, #ff9cee);
+    padding: 25px 0;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.titulo-container {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.titulo-desplazable {
+    display: inline-block;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    animation: desplazar 10s linear infinite;
+}
+
+@keyframes desplazar {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* --- Catálogo de productos --- */
+#catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+/* --- Tarjeta de producto --- */
+.producto-card {
+    background-color: #fff;
+    border: 2px solid #e6d6ff;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(125, 60, 255, 0.1);
+}
+
+.producto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(125, 60, 255, 0.2);
+}
+
+.producto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.producto-card h2 {
+    color: #7d3cff;
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+.producto-card p {
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+/* --- Precio --- */
+.precio {
+    font-size: 1.4em;
+    color: #ff9cee;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* --- Botón --- */
+.btn-comprar {
+    background: linear-gradient(90deg, #7d3cff, #b480ff);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-comprar:hover {
+    background: linear-gradient(90deg, #b480ff, #7d3cff);
+    transform: scale(1.05);
+}
+
+/* --- Pie de página --- */
+.pie {
+    text-align: center;
+    padding: 15px;
+    background-color: #7d3cff;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
